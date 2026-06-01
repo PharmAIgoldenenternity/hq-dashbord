@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人执行工作台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero card">
+        <div>
+          <p class="eyebrow">Execution Workbench</p>
+          <h1 id="site-title">个人执行工作台</h1>
+          <p id="site-subtitle" class="subtitle"></p>
+          <blockquote id="hero-quote" class="hero-quote" hidden>
+            <p id="hero-quote-text" class="hero-quote-text"></p>
+            <footer id="hero-quote-author" class="hero-quote-author"></footer>
+          </blockquote>
+        </div>
+        <div class="hero-meta">
+          <p id="current-date" class="date-text"></p>
+          <button id="focus-mode-toggle" class="secondary-button" type="button">进入执行聚焦</button>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="card priorities-card">
+          <div class="section-heading">
+            <h2>今日推进</h2>
+            <span class="section-hint">先锁定必须完成的动作</span>
+          </div>
+          <ul id="priorities-list" class="priority-list"></ul>
+        </section>
+
+        <section class="card timer-card">
+          <div class="section-heading">
+            <h2>休息计时</h2>
+            <span class="section-hint">启动一个执行周期，减少切换</span>
+          </div>
+          <div class="timer-panel">
+            <p class="timer-label">当前执行周期</p>
+            <div id="timer-display" class="timer-display">10:00</div>
+            <div class="timer-actions">
+              <button id="start-timer" class="primary-button" type="button">开始休息</button>
+              <button id="reset-timer" class="secondary-button" type="button">重置周期</button>
+            </div>
+          </div>
+          <div class="focus-note">
+            <p id="focus-mantra"></p>
+          </div>
+        </section>
+
+        <section class="card tools-card">
+          <div class="section-heading">
+            <h2>快速启动</h2>
+            <span class="section-hint">高频页面，一键进入</span>
+          </div>
+          <div id="tools-grid" class="tools-grid"></div>
+        </section>
+
+        <section class="card links-card">
+          <div class="section-heading">
+            <h2>核心工作区</h2>
+            <span class="section-hint">按工作类型集中打开入口</span>
+          </div>
+          <div id="categories-grid" class="categories-grid"></div>
+        </section>
+
+        <section class="card reminders-card">
+          <div class="section-heading">
+            <h2>执行提醒</h2>
+            <span class="section-hint">切换页面前，先确认下一步</span>
+          </div>
+          <ul id="reminders-list" class="reminders-list"></ul>
+        </section>
+
+        <section class="card editor-help-card">
+          <div class="section-heading">
+            <h2>页面维护说明</h2>
+            <span class="section-hint">按需展开，不打断当前工作</span>
+          </div>
+          <details class="editor-help-disclosure">
+            <summary>展开维护指令示例</summary>
+            <div id="editor-help-content" class="editor-help-content"></div>
+          </details>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data/site-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
